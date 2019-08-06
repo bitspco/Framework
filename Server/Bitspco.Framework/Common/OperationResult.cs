@@ -84,4 +84,12 @@ namespace Bitspco.Framework.Common
             };
         }
     }
+    public class OperationResultCount : OperationResult
+    {
+        public int Count { get; set; }
+    }
+    public class OperationResultCount<T> : OperationResult<T>
+    {
+        public int Count { get; set; }
+    }
 }
