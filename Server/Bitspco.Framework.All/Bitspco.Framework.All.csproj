@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4821932C-07C2-4901-A01E-4052F9FA5C39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bitspco.Framework.All</RootNamespace>
+    <AssemblyName>Bitspco.Framework.All</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BItspco.Framework.Filters.Logger\BItspco.Framework.Filters.Logger.csproj">
+      <Project>{96fe167a-ddb2-4781-945d-29d6c43ae4b4}</Project>
+      <Name>BItspco.Framework.Filters.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BItspco.Framework.Filters.Security.AntiDos\BItspco.Framework.Filters.Security.AntiDos.csproj">
+      <Project>{5cdd05b3-a406-45d8-a9ce-eff504e577f9}</Project>
+      <Name>BItspco.Framework.Filters.Security.AntiDos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BItspco.Framework.Filters.Security.Authentication\BItspco.Framework.Filters.Security.Authentication.csproj">
+      <Project>{bd5c0408-3678-4ac7-a55a-c3a4f59e3f5e}</Project>
+      <Name>BItspco.Framework.Filters.Security.Authentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BItspco.Framework.Filters.Security.IP\BItspco.Framework.Filters.Security.IP.csproj">
+      <Project>{6e64b0f9-e426-4f4c-aa52-6a4e9975a46b}</Project>
+      <Name>BItspco.Framework.Filters.Security.IP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bitspco.Framework.Filters.Security\Bitspco.Framework.Filters.Security.csproj">
+      <Project>{fef1a5cb-0e35-446d-b70d-0f02d07fa6d4}</Project>
+      <Name>Bitspco.Framework.Filters.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bitspco.Framework.Filters\Bitspco.Framework.Filters.csproj">
+      <Project>{727692b7-5af0-45dd-88aa-efa9a3d0d048}</Project>
+      <Name>Bitspco.Framework.Filters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bitspco.Framework\Bitspco.Framework.csproj">
+      <Project>{8338f699-6388-42f2-a71c-fcccfd3e9ef4}</Project>
+      <Name>Bitspco.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
